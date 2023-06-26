@@ -9,6 +9,12 @@ export default function Home({ postsMetaData }: HomeProps) {
     return (
         <>
             <div>Hello World!</div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores possimus
+                libero sit facere, velit reiciendis? Praesentium repellat ratione voluptate
+                veritatis illum, error quasi expedita optio mollitia. Alias praesentium aut
+                laboriosam.
+            </div>
             {postsMetaData.map(data => (
                 <div>
                     <h3>{data.title}</h3>

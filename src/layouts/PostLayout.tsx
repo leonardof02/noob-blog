@@ -1,19 +1,21 @@
 import Head from "next/head";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface PostLayoutProps {
     title: string;
     children: ReactNode | ReactNode[];
 }
 
-export const PostLayout = ({ title, children }: PostLayoutProps) => {
+export default function PostLayout({ title, children }: PostLayoutProps) {
     return (
         <>
             <Head>
-                <title>{ title }</title>
+                <title>{title}</title>
             </Head>
             {/* header */}
-            <main>{ children }</main>
+            <div className="flex flex-col mx-8 mb-56 md:mx-12">
+                {children}
+            </div>
             {/* footer */}
         </>
     );

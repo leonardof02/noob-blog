@@ -1,3 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+    font-family: "Fira Code", monospace;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply mt-5 mb-2 text-lg font-bold border md:text-xl bg-neutral-300 text-neutral-800 w-fit;
+}
+
+h2::before, h3::before, h4::before, h5::before, h6::before {
+    content: "~ $ ";
+    @apply text-blue-800
+}
+
+p {
+    @apply px-2 mt-3 text-sm md:text-lg;
+}
+
+pre {
+    @apply bg-neutral-900 border m-6 p-4 border-neutral-700 rounded-xl shadow-2xl
+}
+
+code {
+    white-space: pre-wrap;
+    @apply min-w-full text-sm md:text-lg
+}
