@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const Header = () => {
 
-    const [ isOpen, setOpen ] = useState<boolean>(true);
+    const [ isOpen, setOpen ] = useState<boolean>(false);
 
     const links = [
         {

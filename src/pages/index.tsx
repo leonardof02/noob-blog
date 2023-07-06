@@ -4,6 +4,7 @@ import { PostMetaData } from "@/utils/types";
 
 import Link from "next/link";
 import Image from "next/image";
+import PostCard from "@/components/PostCard";
 
 interface HomeProps {
     postsMetaData: PostMetaData[];
@@ -24,22 +25,19 @@ export default function Home({ postsMetaData }: HomeProps) {
                 </div>
                 <h1 className="m-5 text-4xl font-bold"> 👋 Hello World!</h1>
                 <p className="text-xl">
-                    Soy Leo, 🇨🇺 Cubano, 📚 Estudiante, 🧑🏻‍💻 Programador autodidacta, 🐧 Usuario de Linux y 🧑🏻‍🏫
-                    Estudiante de Ingeniería Informática en la UCI. Actualmente estoy en proceso
-                    de convertirme en desarrollador full stack y este blog es para compartir mi
-                    aprendizaje y mis tropiezos.
+                    Soy Leo, 🇨🇺 Cubano, 📚 Estudiante, 🧑🏻‍💻 Programador autodidacta, 🐧 Usuario de
+                    Linux y 🧑🏻‍🏫 Estudiante de Ingeniería Informática en la UCI. Actualmente estoy
+                    en proceso de convertirme en desarrollador full stack y este blog es para
+                    compartir mi aprendizaje y mis tropiezos.
                 </p>
-                <hr className="my-10"/>
+                <hr className="my-10" />
                 <section>
                     <h4 className="mb-5 text-2xl font-bold">📰 Mis Posts:</h4>
-                    {postsMetaData.map((data, index) => (
-                        <Link key={index} href={`posts/${data.id}`}>
-                            <div>
-                                <h3>{data.title}</h3>
-                                {data.date && <h6>{data.date}</h6>}
-                            </div>
-                        </Link>
-                    ))}
+                    <div className="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-3">
+                        {postsMetaData.map((data, index) => (
+                            <PostCard data={data} key={index} />
+                        ))}
+                    </div>
                 </section>
             </HomeLayout>
         </>
