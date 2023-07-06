@@ -11,6 +11,7 @@ export const getAllPostMetaData = (): PostMetaData[] => {
         const fullPath = path.join(POSTS_DIRECTORY, file);
         const postContent = fs.readFileSync( fullPath, "utf8" );
         const { data } = grayMatter(postContent);
+        data.id = file.replace(/\.md$/, '');
         return data as PostMetaData;
     });
     return postMetaData;

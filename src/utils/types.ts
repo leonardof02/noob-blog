@@ -4,6 +4,7 @@ import path from "path";
 export const POSTS_DIRECTORY = path.join(process.cwd(), 'src' ,'posts');
 
 export interface PostMetaData {
+    id: string
     title: string,
     date?: string
     imgURL?: string

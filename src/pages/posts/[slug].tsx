@@ -9,6 +9,7 @@ import { getAllSlugs } from "@/utils/getAllSlugs";
 import { getBlogPostContent } from "@/utils/getBlogPostContent";
 
 import PostLayout from "@/layouts/PostLayout";
+import styles from "./post.module.css";
 
 interface PostProps {
     content: string;
@@ -40,8 +41,8 @@ export const getStaticProps = async ({ params }: { params: { slug: string } }) =
             }
         })
         .process(content);
-    
-        const contentHtml = processedContent.toString();
+
+    const contentHtml = processedContent.toString();
 
     return {
         props: {
@@ -50,7 +51,6 @@ export const getStaticProps = async ({ params }: { params: { slug: string } }) =
         }
     };
 };
-
 
 export default function Post({ content, data }: PostProps) {
     return (
@@ -67,7 +67,16 @@ export default function Post({ content, data }: PostProps) {
                     </li>
                 </ul>
                 <div className="max-w-3xl text-xl" id="post-content">
-                    { data.imgURL && <Image src={ data.imgURL } alt="Post related image" width={1366} height={760} /> }
+                    {data.imgURL && (
+                        <Image
+                            id="post-img"
+                            className={ styles['post-img'] }
+                            src={data.imgURL}
+                            alt="Post related image"
+                            width={1366}
+                            height={760}
+                        />
+                    )}
                     <article dangerouslySetInnerHTML={{ __html: content }} />
                 </div>
             </PostLayout>
