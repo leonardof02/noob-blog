@@ -1,6 +1,7 @@
 ---
 title: Blog de ejemplo
 date: 2002-13-3
+imgURL: /images/image1.png
 ---
 
 ## Título del post

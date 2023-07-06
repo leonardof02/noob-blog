@@ -1,3 +1,7 @@
 h2, h3, h4, h5, h6 {
     @apply bg-neutral-300 text-neutral-800
 }
+
+img {
+    @apply rounded-md border-8 border-violet-600
+}

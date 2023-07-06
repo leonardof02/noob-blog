@@ -16,7 +16,7 @@ export default function Home({ postsMetaData }: HomeProps) {
                 laboriosam.
             </div>
             {postsMetaData.map(data => (
-                <div>
+                <div key={data.date}>
                     <h3>{data.title}</h3>
                     {data.date && <h6>{data.date}</h6>}
                 </div>

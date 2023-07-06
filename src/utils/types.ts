@@ -6,6 +6,7 @@ export const POSTS_DIRECTORY = path.join(process.cwd(), 'src' ,'posts');
 export interface PostMetaData {
     title: string,
     date?: string
+    imgURL?: string
 }
 
 export interface BlogPost {

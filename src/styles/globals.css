@@ -16,20 +16,33 @@ h6 {
     @apply mt-5 mb-2 text-lg font-bold border md:text-xl bg-neutral-300 text-neutral-800 w-fit;
 }
 
-h2::before, h3::before, h4::before, h5::before, h6::before {
-    content: "~ $ ";
-    @apply text-blue-800
-}
-
-p {
+article p {
     @apply px-2 mt-3 text-sm md:text-lg;
 }
 
 pre {
-    @apply bg-neutral-900 border m-6 p-4 border-neutral-700 rounded-xl shadow-2xl
+    @apply p-4 m-6 border shadow-2xl bg-neutral-900 border-neutral-700;
+}
+
+p code {
+    @apply font-bold bg-neutral-900 p-1 rounded-md
 }
 
 code {
     white-space: pre-wrap;
-    @apply min-w-full text-sm md:text-lg
+    @apply min-w-full text-sm md:text-lg;
+}
+
+blockquote {
+    @apply flex items-center gap-4 p-6 my-10 font-bold text-yellow-400 bg-yellow-400 border border-yellow-400 ms-5 bg-opacity-20;
+}
+
+blockquote p {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+blockquote::before {
+    content: "💡";
+    @apply text-xl;
 }

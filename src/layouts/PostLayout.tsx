@@ -1,3 +1,5 @@
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import Head from "next/head";
 import { ReactNode } from "react";
 
@@ -12,11 +14,11 @@ export default function PostLayout({ title, children }: PostLayoutProps) {
             <Head>
                 <title>{title}</title>
             </Head>
-            {/* header */}
-            <div className="flex flex-col mx-8 mb-56 md:mx-12">
+            <Header />
+            <div className="flex flex-col mx-4 mb-56 md:mx-12">
                 {children}
             </div>
-            {/* footer */}
+            <Footer />
         </>
     );
 };
