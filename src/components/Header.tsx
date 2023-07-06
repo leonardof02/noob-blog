@@ -29,16 +29,16 @@ export const Header = () => {
                     <p className="font-bold text-blue-800">{"/>"}</p>
                 </span>
                 <nav className="flex flex-col gap-5 md:flex-row">
-                    <ul className={`flex flex-col w-full gap-4 overflow-hidden md:flex-row transition-all ${ !isOpen && "h-0" }`}>
+                    <ul className={`flex flex-col w-full gap-4 overflow-hidden md:flex-row transition-all md:h-fit ${ !isOpen && "h-0" }`}>
                         { links.map( (link, index) =>
                             <Link href={ link.link } key={ index } className="mx-3">
-                                <li className="box-border transition-all duration-75 hover:border-b-2 border-b-blue-800">
+                                <li className="box-border transition-all duration-75 hover:outline-offset-8 hover:outline outline-blue-800">
                                     {link.label}
                                 </li>
                             </Link>
                         )}
                     </ul>
-                    <button className="w-full font-extrabold border border-neutral-300 hover:bg-neutral-300 hover:text-neutral-900"
+                    <button className="w-full font-extrabold border md:hidden border-neutral-300 hover:bg-neutral-300 hover:text-neutral-900"
                     onClick={() => setOpen( ! isOpen )}
                     >...</button>
                 </nav>
