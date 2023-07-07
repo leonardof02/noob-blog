@@ -30,7 +30,7 @@ export default function Home({ postsMetaData }: HomeProps) {
                     Soy Leo, 🇨🇺 Cubano, 📚 Estudiante, 🧑🏻‍💻 Programador autodidacta, 🐧 Usuario de
                     Linux y 🧑🏻‍🏫 Estudiante de Ingeniería Informática en la UCI. Actualmente estoy
                     en proceso de convertirme en desarrollador full stack y este blog es para
-                    compartir mi aprendizaje, mis tropiezos y alguna que otra info util como
+                    compartir mi aprendizaje, mis tropiezos y alguna que otra info útil como
                     Noob que soy al fin 😅.
                 </p>
                 <hr className="my-10" />

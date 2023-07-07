@@ -8,7 +8,7 @@ export const Header = () => {
     const links = [
         {
             link: "/#presentation",
-            label: "Presentacion"
+            label: "Presentación"
         },
         {
             link: "/#posts",
