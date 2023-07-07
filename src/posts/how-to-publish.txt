@@ -1,0 +1,27 @@
+Como publicar?
+
+Para publicar es necesario antes de hacer cualquier cosa especificar los metadatos en frontMatter
+Hasta ahora solamente estan disponibles la fecha, los tags y la foto principal,
+
+OJO: cada vez que se va a poner un link a un asset el asset debe estar en la carpeta public y
+debe incluir el prefijo "/noob-blog/" debido a las caracteristicas del hosting en github pages.
+
+Ejemplo de metadatos en frontMatter:
+
+---
+title: "pnpm: Cómo aumentar tu productividad"
+date: 06-07-2023
+imgURL: /noob-blog/images/pnpm-image.png
+
+tags:
+    - productividad
+    - tips
+
+---
+
+Ejemplo de links de una imagen:
+    imgURL: /noob-blog/images/pnpm-image.png
+    ![ alt ](/noob-blog/images/avatar-picture.ico)
+    <img alt="" src="" />
+
+El blog se escribe de manera normal en MD
