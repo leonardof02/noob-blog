@@ -1,11 +1,11 @@
 ---
 title: "pnpm: Cómo aumentar tu productividad"
 date: 06-07-2023
-imgURL: /images/pnpm-image.png
+imgURL: /noob-blog/images/pnpm-image.png
 
 tags:
     - productividad
-    - tips 
+    - tips
 
 ---
 
@@ -15,7 +15,7 @@ Hoy les traigo una herramienta que ojalá haya conocido antes. Hablo de **pnpm**
 
 PNPM utiliza un almacenamiento compartido de paquetes, en vez de guardar el paquete en el proyecto solo guarda un enlace, lo que significa que los paquetes se instalan una sola vez y se comparten entre todos los proyectos que los requieren. Esto ahorra espacio en disco, ya que los paquetes que se comparten no necesitan ser duplicados en cada proyecto. Cada vez que comienzas un nuevo proyecto es posible que puedas reutilizar los paquetes que instalas y ahorres conexion. De otra manera, si ya instalaste react por ejemplo, pues instalarlo de nuevo es pan comido!
 
-![NPM vs PNPM Image](/images/npm-vs-pnpm.png)
+![NPM vs PNPM Image](/noob-blog/images/npm-vs-pnpm.png)
 
 Ademas les viene bien en momentos de poca estabilidad de internet y mala conexion. A continuacion te dejo unos tips para que le puedas sacar el maximo provecho a este package manager.
 
