@@ -33,7 +33,7 @@ export default function Home({ postsMetaData }: HomeProps) {
                 <hr className="my-10" />
                 <section>
                     <h4 className="mb-5 text-2xl font-bold">📰 Mis Posts:</h4>
-                    <div className="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-3">
+                    <div className="flex flex-col gap-5 md:max-w-3xl">
                         {postsMetaData.map((data, index) => (
                             <PostCard data={data} key={index} />
                         ))}

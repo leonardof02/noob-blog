@@ -60,11 +60,13 @@ export default function Post({ content, data }: PostProps) {
                     <span className="m-2 text-blue-700">_</span>
                     {data.title}
                 </h1>
-                <ul className="flex flex-col max-w-3xl gap-1 m-2 text-lg font-normal md:items-center md:flex-row justify-evenly">
+                <ul className="flex flex-col items-start max-w-3xl gap-1 m-2 text-lg font-normal md:flex-row">
                     <li className="px-3 py-1 font-extrabold">🗓️ {data.date}</li>
-                    <li className="px-3 py-1 text-blue-600 bg-blue-800 bg-opacity-25 border border-blue-800 rounded-md w-fit">
-                        #Mierda
-                    </li>
+                    { data.tags && data.tags.map( (tag, index) =>
+                        <li key={index} className="px-3 py-1 text-blue-600 bg-blue-800 bg-opacity-25 border border-blue-800 rounded-md w-fit">
+                            #{ tag }    
+                        </li>
+                        )}
                 </ul>
                 <div className="max-w-3xl text-xl" id="post-content">
                     {data.imgURL && (

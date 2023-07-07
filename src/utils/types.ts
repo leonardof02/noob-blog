@@ -8,6 +8,7 @@ export interface PostMetaData {
     title: string,
     date?: string
     imgURL?: string
+    tags?: []
 }
 
 export interface BlogPost {
