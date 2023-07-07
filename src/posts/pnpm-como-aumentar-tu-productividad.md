@@ -15,15 +15,17 @@ Hoy les traigo una herramienta que ojalá haya conocido antes. Hablo de **pnpm**
 
 PNPM utiliza un almacenamiento compartido de paquetes, en vez de guardar el paquete en el proyecto solo guarda un enlace, lo que significa que los paquetes se instalan una sola vez y se comparten entre todos los proyectos que los requieren. Esto ahorra espacio en disco, ya que los paquetes que se comparten no necesitan ser duplicados en cada proyecto. Cada vez que comienzas un nuevo proyecto es posible que puedas reutilizar los paquetes que instalas y ahorres conexion. De otra manera, si ya instalaste react por ejemplo, pues instalarlo de nuevo es pan comido!
 
+![NPM vs PNPM Image](/images/npm-vs-pnpm.png)
+
 Ademas les viene bien en momentos de poca estabilidad de internet y mala conexion. A continuacion te dejo unos tips para que le puedas sacar el maximo provecho a este package manager.
 
 ## TIPS
 
-**1 - Instalacion de paquetes offline:** Si ya tienes instalado un paquete con la flag `--prefer-offline` se puede instalar de forma instantanea y sin conexion. Si por el camino se pierde algun paquete y no lo encuentra descarga solo aquellas partes que faltaron aumentando la velocidad de instalacion, tambien esta el flag `--offline` que instala el paquete offline estructo, es decir, si hace falta descargar algo no lo va a hacer y dara error:
+**1 - Instalación de paquetes offline:** Si ya tienes instalado un paquete con la flag `--prefer-offline` se puede instalar de forma instantanea y sin conexion. Si por el camino se pierde algun paquete y no lo encuentra descarga solo aquellas partes que faltaron aumentando la velocidad de instalacion, tambien esta el flag `--offline` que instala el paquete offline estructo, es decir, si hace falta descargar algo no lo va a hacer y dara error:
 
 Ejemplo: `pnpm add dayjs --prefer-offline // instala un paquete offline`
 
-**2 - Configuracion de reintentos:** De manera predeterminada **pnpm** hace 3 intentos a la hora de descargar un paquete y el tiempo que se demora de un reintento a otro se demora cada vez mas, esto no es favorable para redes lentas y se puede modificar en la configuracion. Para esto vamos a escribir 3 comandos:
+**2 - Configuración de reintentos:** De manera predeterminada **pnpm** hace 3 intentos a la hora de descargar un paquete y el tiempo que se demora de un reintento a otro se demora cada vez mas, esto no es favorable para redes lentas y se puede modificar en la configuracion. Para esto vamos a escribir 3 comandos:
 
 ``` bash
 # Establece la cantidad de reintentos que hace si falla al descargar

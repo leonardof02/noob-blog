@@ -7,27 +7,23 @@ export const Header = () => {
 
     const links = [
         {
-            link: "#",
-            label: "Mierda Seca"
+            link: "/#presentation",
+            label: "Presentacion"
         },
         {
-            link: "#",
-            label: "La verdad"
-        },
-        {
-            link: "#",
-            label: "Sobre Mi"
+            link: "/#posts",
+            label: "Posts"
         }
     ]
 
     return (
         <header className="flex items-center mb-12 bg-neutral-900 min-h-fit p-7">
             <div className="flex flex-col items-center justify-between w-full md:flex-row">
-                <span className="flex gap-4 m-3 text-3xl font-extrabold text-center">
+                <Link href="/" className="flex gap-4 m-3 text-3xl font-extrabold text-center">
                     <p className="font-bold text-blue-800">{"<"}</p>
                     <p>NOOB BLOG</p>
                     <p className="font-bold text-blue-800">{"/>"}</p>
-                </span>
+                </Link>
                 <nav className="flex flex-col gap-5 md:flex-row">
                     <ul className={`flex flex-col w-full gap-4 overflow-hidden md:flex-row transition-all md:h-fit ${ !isOpen && "h-0" }`}>
                         { links.map( (link, index) =>
