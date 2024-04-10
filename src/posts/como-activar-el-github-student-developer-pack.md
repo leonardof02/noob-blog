@@ -1,7 +1,7 @@
 ---
 title: "Cómo activar el GitHub Student Developer Pack"
 date: 03-05-2024
-imgURL: /noob-blog/images/pnpm-image.png
+imgURL: /noob-blog/images/gh-student-developer-pack.jpeg
 
 tags:
     - github
